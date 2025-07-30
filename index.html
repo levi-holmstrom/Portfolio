@@ -1,0 +1,1244 @@
+<!DOCTYPE html >
+<html lang="en" >
+ <head >
+        <meta charset="UTF-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+        <meta http-equiv="Cache-Control" content="max-age=31536000, immutable" >
+        <meta http-equiv="X-Content-Type-Options" content="nosniff" >
+        <title > Levi Holmstrom - Creative Technology Specialist Resume</title >
+        <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" / >
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet" >
+        <style >
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+            overflow-x: hidden;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -2;
+            opacity: 0.3;
+        }
+
+        .network-grid {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            opacity: 0.15;
+        }
+
+        .node {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: #fff;
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+            animation: spinNode 8s linear infinite;
+        }
+
+        .line {
+            position: absolute;
+            background: #fff;
+            height: 2px;
+            opacity: 0.1;
+            transform-origin: 0 0;
+            animation: stretchLine 5s ease-in-out infinite;
+        }
+
+        @keyframes spinNode {
+            0% {
+                transform: rotate(0deg) translate(20px);
+            }
+
+            100% {
+                transform: rotate(360deg) translate(20px);
+            }
+        }
+
+        @keyframes stretchLine {
+            0%, 100% {
+                transform: scaleX(1);
+                opacity: 0.1;
+            }
+
+            50% {
+                transform: scaleX(1.5);
+                opacity: 0.5;
+            }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header {
+            padding: 40px 10px;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), transparent);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+            .header h1 {
+                font-size: 3rem;
+                font-weight: 700;
+                color: #fff;
+                text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+                margin-bottom: 10px;
+            }
+
+            .header p {
+                font-size: 1.2rem;
+                color: #ccc;
+                margin-top: 8px;
+            }
+
+        .section {
+            margin: 40px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            -webkit-backdrop-filter: blur(10px); /* Added for Safari */
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+            .section h2 {
+                font-size: 2rem;
+                margin-bottom: 20px;
+                color: #fff;
+            }
+
+        .content-row {
+            display: flex;
+            gap: 15px;
+            align-items: stretch;
+            flex-wrap: nowrap;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .sidebar {
+            background: #0d0d0d;
+            border: 1px solid #222;
+            border-radius: 10px;
+            padding: 15px;
+            width: 280px;
+            flex-shrink: 0;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+            .sidebar h3 {
+                font-size: 2rem;
+                color: #fff;
+                margin-bottom: 15px;
+            }
+
+            .sidebar button {
+                display: block;
+                width: 100%;
+                max-width: 240px;
+                padding: 8px;
+                margin-bottom: 8px;
+                background: #1a1a1a;
+                border: 1px solid #222;
+                color: #fff;
+                text-align: center;
+                font-size: 0.9rem;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+
+                .sidebar button:hover {
+                    border-color: #fff;
+                    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+                }
+
+                .sidebar button.active {
+                    background: #333;
+                    border-color: #fff;
+                    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+                }
+
+            .sidebar p {
+                font-size: 0.8rem;
+                color: #ccc;
+                margin-top: 10px;
+                text-align: center;
+            }
+
+        .main-content {
+            flex-grow: 1;
+            background: #0d0d0d;
+            border: 1px solid #222;
+            border-radius: 10px;
+            padding: 15px;
+            transition: opacity 0.5s ease;
+            overflow: hidden;
+            min-height: 400px;
+            position: relative;
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+            .main-content.fade {
+                opacity: 0;
+            }
+
+        .skills {
+            max-height: 100%;
+            overflow-y: auto;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+        }
+
+            .skills h3 {
+                font-size: 1.2rem;
+                color: #fff;
+                margin-bottom: 15px;
+                font-weight: 700;
+            }
+
+        .carousel-container {
+            max-width: 100%;
+            margin: 0 auto;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+            .carousel-container h4 {
+                font-size: 1.5rem;
+                color: #fff;
+                margin: 15px 0;
+            }
+
+        .swiper {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            padding: 10px 0px;
+            overflow: visible;
+            position: relative;
+        }
+
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .card {
+            background: #0d0d0d;
+            border: 1px solid #222;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 100%;
+            max-width: 90vw;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+            .card:hover {
+                transform: translateY(-3px);
+                border-color: #fff;
+                box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+            }
+
+            .card video,
+            .card img {
+                width: 100%;
+                height: auto;
+                max-height: 500px;
+                object-fit: contain;
+                display: block;
+            }
+
+            .card .audio-player {
+                width: 100%;
+                padding: 15px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background: #1a1a1a;
+                border: 1px solid #222;
+                border-radius: 8px;
+                margin-bottom: 10px;
+            }
+
+                .card .audio-player audio {
+                    width: 100%;
+                    margin-bottom: 10px;
+                    display: none;
+                }
+
+                .card .audio-player .controls {
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                    width: 100%;
+                    justify-content: center;
+                }
+
+                .card .audio-player .play-pause {
+                    background: #333;
+                    border: 1px solid #222;
+                    color: #fff;
+                    padding: 8px 15px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                }
+
+                    .card .audio-player .play-pause:hover {
+                        border-color: #fff;
+                        box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+                    }
+
+                .card .audio-player .progress-bar {
+                    flex-grow: 1;
+                    max-width: 200px;
+                    height: 6px;
+                    background: #333;
+                    border-radius: 3px;
+                    overflow: hidden;
+                    position: relative;
+                }
+
+                .card .audio-player .progress {
+                    width: 0;
+                    height: 100%;
+                    background: #fff;
+                    transition: width 0.1s linear;
+                }
+
+                .card .audio-player .visualizer {
+                    display: flex;
+                    gap: 4px;
+                    height: 30px;
+                    width: 100%;
+                    max-width: 200px;
+                    justify-content: center;
+                    margin-top: 10px;
+                }
+
+                .card .audio-player .bar {
+                    width: 5px;
+                    height: 100%;
+                    background: #fff;
+                    opacity: 0.3;
+                    animation: visualize 1s ease-in-out infinite;
+                }
+
+                    .card .audio-player .bar:nth-child(2) {
+                        animation-delay: 0.1s;
+                    }
+
+                    .card .audio-player .bar:nth-child(3) {
+                        animation-delay: 0.2s;
+                    }
+
+                    .card .audio-player .bar:nth-child(4) {
+                        animation-delay: 0.3s;
+                    }
+
+                    .card .audio-player .bar:nth-child(5) {
+                        animation-delay: 0.4s;
+                    }
+
+                    .card .audio-player .bar:nth-child(6) {
+                        animation-delay: 0.5s;
+                    }
+
+        @keyframes visualize {
+            0%, 100% {
+                transform: scaleY(0.3);
+                opacity: 0.3;
+            }
+
+            50% {
+                transform: scaleY(1);
+                opacity: 0.7;
+            }
+        }
+
+        .card .text-content {
+            width: 100%;
+            max-height: 500px;
+            overflow-y: auto;
+            padding: 15px;
+            font-size: 0.9rem;
+            color: #ccc;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .card-content {
+            padding: 15px;
+            text-align: center;
+        }
+
+            .card-content h4 {
+                font-size: 1rem;
+                color: #fff;
+            }
+
+            .card-content p {
+                font-size: 0.8rem;
+                color: #ccc;
+                margin-top: 8px;
+            }
+
+        .skills ul,
+        .job ul,
+        .qualification ul {
+            list-style: none;
+            margin-top: 10px;
+            display: inline-block;
+            text-align: center;
+        }
+
+            .skills ul li,
+            .job ul li,
+            .qualification ul li {
+                font-size: 0.8rem;
+                color: #fff;
+                margin-bottom: 8px;
+                position: relative;
+                padding-left: 20px;
+                text-align: center;
+            }
+
+                .skills ul li:before,
+                .job ul li:before,
+                .qualification ul li:before {
+                    content: '•';
+                    position: absolute;
+                    left: 0;
+                    color: #fff;
+                }
+
+        .job,
+        .qualification,
+        .hobby {
+            margin-bottom: 20px;
+            width: 100%;
+            text-align: center;
+        }
+
+            .job h3,
+            .qualification h3 {
+                font-size: 1.5rem;
+                color: #fff;
+                margin-bottom: 10px;
+            }
+
+            .job p,
+            .qualification p,
+            .hobby p {
+                font-size: 0.9rem;
+                color: #ccc;
+                margin-top: 5px;
+            }
+
+        .footer {
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.5);
+            margin-top: 40px;
+            border-top: 1px solid #222;
+            text-align: center;
+        }
+
+            .footer p {
+                font-size: 0.8rem;
+                color: #ccc;
+            }
+
+        :root {
+            --swiper-button-size: 32px;
+            --swiper-button-padding: 8px;
+            --swiper-button-opacity: 0.8;
+            --swiper-button-hover-opacity: 1;
+            --swiper-button-hover-scale: 1.1;
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: var(--swiper-button-size);
+            height: var(--swiper-button-size);
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            padding: var(--swiper-button-padding);
+            z-index: 10;
+            cursor: pointer;
+            opacity: var(--swiper-button-opacity);
+            transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+            .swiper-button-prev::after,
+            .swiper-button-next::after {
+                font-size: calc(var(--swiper-button-size) / 2);
+            }
+
+        .swiper-button-prev {
+            left: 10px;
+        }
+
+        .swiper-button-next {
+            right: 10px;
+        }
+
+            .swiper-button-prev:hover,
+            .swiper-button-next:hover {
+                opacity: var(--swiper-button-hover-opacity);
+                transform: translateY(-50%) scale(var(--swiper-button-hover-scale));
+                background-color: rgba(0, 0, 0, 0.7);
+            }
+
+        .swiper-button-disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+            transform: translateY(-50%) scale(1);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            .header {
+                padding: 20px 10px;
+            }
+
+                .header h1 {
+                    font-size: 2rem;
+                }
+
+                .header p {
+                    font-size: 1rem;
+                }
+
+            .section {
+                margin: 20px 0;
+                padding: 15px;
+            }
+
+                .section h2 {
+                    font-size: 1.5rem;
+                }
+
+            .content-row {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .sidebar {
+                width: 100%;
+                max-width: 100%;
+                margin-bottom: 10px;
+                min-height: 200px;
+                padding: 10px;
+            }
+
+                .sidebar h3 {
+                    font-size: 1.5rem;
+                }
+
+                .sidebar button {
+                    font-size: 0.8rem;
+                    padding: 8px;
+                    max-width: 100%;
+                }
+
+            .main-content {
+                min-height: 200px;
+                padding: 10px;
+                max-width: 100%;
+            }
+
+            .carousel-container h4 {
+                font-size: 1.2rem;
+            }
+
+            .skills h3 {
+                font-size: 1rem;
+            }
+
+            .card {
+                max-width: 95vw;
+            }
+
+                .card video,
+                .card img,
+                .card .text-content {
+                    width: 100%;
+                    max-height: 400px;
+                    object-fit: contain;
+                }
+
+                .card .audio-player {
+                    padding: 10px;
+                }
+
+                    .card .audio-player .progress-bar {
+                        max-width: 80vw;
+                    }
+
+                    .card .audio-player .visualizer {
+                        max-width: 80vw;
+                    }
+
+            .swiper {
+                padding: 10px 20px;
+            }
+
+            :root {
+                --swiper-button-size: 28px;
+                --swiper-button-padding: 6px;
+            }
+
+            .swiper-button-prev,
+            .swiper-button-next {
+                top: auto;
+                bottom: 20px;
+                transform: none;
+            }
+
+            .swiper-button-prev {
+                left: 20%;
+            }
+
+            .swiper-button-next {
+                right: 20%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="container">
+        <div class="header">
+            <h1>Levi Holmstrom</h1>
+            <p>Technology Specialist | AI, Game Development, Web & IT</p>
+        </div>
+
+        <div class="section">
+            <div class="content-row">
+                <div class="sidebar">
+                    <h3>Portfolio</h3>
+                    <p>Core technical competencies</p><br />
+                    <button data-category="skills">Skills Overview</button>
+                    <button data-category="stableDiffusion">Stable Diffusion</button>
+                    <button data-category="kling">KLING / VEO3 </button>
+                    <button data-category="suno">Suno</button>
+                    <button data-category="prompts">Creative Prompts</button>
+                    <button data-category="animation">Animation & Character</button>
+                    <button data-category="hdrp">Unity HDRP</button>
+                    <button data-category="urp">Unity URP</button>
+                </div>
+                <div class="main-content" id="mainContent">
+                    <div class="network-grid">
+                        <div class="node" style="top: 10%; left: 15%; animation-delay: 0s;"></div>
+                        <div class="node" style="top: 20%; left: 70%; animation-delay: 0.5s;"></div>
+                        <div class="node" style="top: 35%; left: 25%; animation-delay: 1s;"></div>
+                        <div class="node" style="top: 50%; left: 80%; animation-delay: 1.5s;"></div>
+                        <div class="node" style="top: 65%; left: 40%; animation-delay: 2s;"></div>
+                        <div class="node" style="top: 80%; left: 60%; animation-delay: 2.5s;"></div>
+                        <div class="node" style="top: 25%; left: 90%; animation-delay: 3s;"></div>
+                        <div class="node" style="top: 75%; left: 20%; animation-delay: 3.5s;"></div>
+                        <div class="line" style="top: 10%; left: 15%; width: 100px; transform: rotate(30deg); animation-delay: 0s;"></div>
+                        <div class="line" style="top: 20%; left: 70%; width: 80px; transform: rotate(-45deg); animation-delay: 0.5s;"></div>
+                        <div class="line" style="top: 35%; left: 25%; width: 120px; transform: rotate(60deg); animation-delay: 1s;"></div>
+                        <div class="line" style="top: 50%; left: 80%; width: 90px; transform: rotate(15deg); animation-delay: 1.5s;"></div>
+                        <div class="line" style="top: 65%; left: 40%; width: 110px; transform: rotate(-30deg); animation-delay: 2s;"></div>
+                        <div class="line" style="top: 80%; left: 60%; width: 70px; transform: rotate(75deg); animation-delay: 2.5s;"></div>
+                        <div class="line" style="top: 25%; left: 90%; width: 85px; transform: rotate(-60deg); animation-delay: 3s;"></div>
+                        <div class="line" style="top: 75%; left: 20%; width: 95px; transform: rotate(45deg); animation-delay: 3.5s;"></div>
+                    </div>
+                    <div class="skills">
+                        <h3>[ Artificial Intelligence & Automation ]</h3>
+                        <ul>
+                            <li><strong>AI Integration:</strong> Leveraged ChatGPT since January 2024 for automation, scripting, and interactive systems.</li>
+                            <li><strong>AI Creative Tools:</strong> Experience with <strong><em>StableDiffusion</em></strong>,<strong><em> Suno</em></strong>, <strong><em>Kling</em></strong>, <strong><em>Meshy.ai</em></strong>.</li>
+                            <li><strong>Prompt Engineering:</strong> Developed instruction sets for AI models, including a ChatGPT helper module with 200+ unique user interactions.</li>
+                            <li><strong>LLM:</strong> Baseline knowledge on Bigram Counting to Self-Attention. Spooled up internal GPT2 transformer.</li>
+                            <br />
+                            <br />
+                        </ul>
+                        <h3>[ Game Development & 3D Animation ]</h3>
+                        <ul>
+                            <li><strong>Unity 3D Development:</strong> Built interactive applications and networked games using Unity 3D, with expertise in FishNet for client-side prediction and multiplayer functionality.</li>
+                            <li><strong>Motion Capture:</strong> Captured and integrated 3D performances using Reallusion software, enhancing character animations for games and simulations.</li>
+                            <br />
+                            <br />
+                        </ul>
+                        <h3>[ Software & Web Development ]</h3>
+                        <ul>
+                            <li><strong>Development Environments:</strong> Configured robust environments for Python, React, C#/C++, managing dependencies, SDKs, and build pipelines.</li>
+                            <li><strong>Web Server Management:</strong> Provisioned and hosted web servers using on-premise and cloud platforms (Cloudflare, Azure, GitHub) for scalable applications.</li>
+                            <br />
+                            <br />
+                        </ul>
+                        <h3>[ Networking & System Administration ]</h3>
+                        <ul>
+                            <li><strong>Network Infrastructure:</strong> Configured Cisco Meraki and Palo Alto networks, including subnet zoning and access point management.</li>
+                            <li><strong>System Administration:</strong> Managed enterprise resources using Microsoft Endpoint Manager, OKTA, Intune, and Panorama for secure access and deployment.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Professional Experience</h2>
+            <div class="job">
+                <h3>Technical Business Analyst / Service Delivery Propagation</h3>
+                <p>Lorna Jane HQ, Brisbane, QLD (6-Month Contract)</p>
+                <ul>
+                    <li>Monitored Microsoft Dynamics AX using PowerShell tools for daily reporting.</li>
+                    <li>Reported data to CIO for NetSuite ERP implementation.</li>
+                    <li>Updated IT Service Delivery documentation, addressing procedural gaps.</li>
+                    <li>Designed CRM request pipeline using Visio for ZenDesk modules.</li>
+                    <li>Administered resources via Microsoft Endpoint Manager, OKTA, and Panorama.</li>
+                    <li>Deployed mobile fleet devices with Microsoft Intune.</li>
+                    <li>Configured SQL Express and Retail Modern POS systems for store deployments.</li>
+                    <li>Managed Cisco Meraki and Palo Alto network configurations.</li>
+                </ul>
+            </div>
+            <div class="job">
+                <h3>Previous Roles</h3>
+                <ul>
+                    <li>Windows 10 Roll-out, Multipplex (Jul 2019 - Feb 2020)</li>
+                    <li>L2/L3 Analyst, Beam Surfory (Dec 2017 - Jun 2019)</li>
+                    <li>Senior Desktop Engineer, AIA Insurance (Jan 2017 - Nov 2017)</li>
+                    <li>LHD Project, BAE Systems (Jan 2013 - Nov 2015)</li>
+                    <li>System Administrator, Vekla My U (Apr 2011 - Jan 2013)</li>
+                    <li>System Engineer, Secure Agility (Aug 2009 - Mar 2011)</li>
+                    <li>Jnr Desktop Support, Aus Kitchen Ind (Dec 2008 - Mar 2009)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Qualifications</h2>
+            <div class="qualification">
+                <h3>MCAI - Windows Server 2016</h3>
+                <p>Pearson VUE, Sydney (Completed 2018)</p>
+            </div>
+            <div class="qualification">
+                <h3>Cert IV Networking</h3>
+                <p>Mt Druitt TAFE, NSW (Completed 2012)</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Hobbies</h2>
+            <div class="hobby">
+                <p>Outdoor Adventure, Music/Entertainment, Technology, Travel, Home Renovation, Investing & Markets</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>References</h2>
+            <p>Available upon request</p>
+        </div>
+
+        <div class="footer">
+            <p>Contact: <a href="mailto:levi.holmstrom@example.com" class="text-gray-400 hover:text-white">levi.holmstrom@example.com</a> | © 2025 Levi Holmstrom</p>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        // Particle.js Initialization
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 50, density: { enable: true, value_area: 800 } },
+                color: { value: '#ffffff' },
+                shape: { type: 'circle' },
+                opacity: { value: 0.3, random: true },
+                size: { value: 3, random: true },
+                line_linked: { enable: true, distance: 150, color: '#ffffff', opacity: 0.2, width: 1 },
+                move: { enable: true, speed: 1, direction: 'none', random: true }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' } },
+                modes: { repulse: { distance: 100 }, push: { particles_nb: 4 } }
+            }
+        });
+
+        // Store Swiper instances manually
+        const swiperInstances = new Map();
+
+        // Fetch portfolio.json and initialize content
+        fetch('portfolio.json')
+            .then(response => {
+                if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+                return response.json();
+            })
+            .then(data => {
+                const mainContent = document.getElementById('mainContent');
+                const buttons = document.querySelectorAll('.sidebar button');
+
+                // Validate portfolio data
+                console.log('Portfolio data:', data);
+                if (!data.generativeAI || !data.generativeAI.stableDiffusion) {
+                    console.error('Error: generativeAI.stableDiffusion is missing or undefined in portfolio.json');
+                } else if (!Array.isArray(data.generativeAI.stableDiffusion)) {
+                    console.error('Error: generativeAI.stableDiffusion is not an array in portfolio.json');
+                } else {
+                    console.log('Stable Diffusion data:', data.generativeAI.stableDiffusion);
+                }
+
+                // Store portfolio content for each category
+                const contentMap = {
+                    skills: mainContent.querySelector('.skills').outerHTML,
+                    stableDiffusion: `
+                            <div class="carousel-container">
+                                <h4>Stable Diffusion Examples</h4>
+                                <div class="swiper stableDiffusion-carousel">
+                                    <div class="swiper-wrapper" id="stableDiffusionCards">
+                                        ${data.generativeAI && data.generativeAI.stableDiffusion && Array.isArray(data.generativeAI.stableDiffusion) ?
+                            data.generativeAI.stableDiffusion.map(item => `
+                                        <div class="swiper-slide">
+                                            <div class="card">
+                                                <img data-src="${item.path}" class="swiper-lazy" alt="${item.title}" aria-label="${item.title}" onerror="console.error('Failed to load image: ${item.path}')">
+                                                <div class="swiper-lazy-preloader"></div>
+                                                <div class="card-content">
+                                                    <h4>${item.title}</h4>
+                                                    <p>${item.description || ''}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    `).join('') : '<div class="swiper-slide"><div class="card"><p>No Stable Diffusion items available</p></div></div>'}
+                                    </div>
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div>
+                                </div>
+                            </div>
+                        `,
+                    kling: `
+                            <div class="carousel-container">
+                                <h4>Production Example</h4>
+                                <div class="swiper kling-carousel">
+                                    <div class="swiper-wrapper" id="klingCards">
+                                        ${data.generativeAI && data.generativeAI.kling && Array.isArray(data.generativeAI.kling) ?
+                            data.generativeAI.kling.map(item => `
+                                        <div class="swiper-slide">
+                                            <div class="card">
+                                                <video controls aria-label="${item.title}">
+                                                    <source src="${item.path}" type="video/mp4" onerror="console.error('Failed to load video: ${item.path}')">
+                                                    Your browser does not support the video tag.
+                                                </video>
+                                                <div class="card-content">
+                                                    <h4>${item.title}</h4>
+                                                    <p>${item.description || ''}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    `).join('') : '<div class="swiper-slide"><div class="card"><p>No Kling.ai items available</p></div></div>'}
+                                    </div>
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div>
+                                </div>
+                            </div>
+                        `,
+                    suno: `
+                            <div class="carousel-container">
+                                <h4>Suno Examples</h4>
+                                <div class="swiper suno-carousel">
+                                    <div class="swiper-wrapper" id="sunoCards">
+                                        ${data.generativeAI && data.generativeAI.suno && Array.isArray(data.generativeAI.suno) ?
+                            data.generativeAI.suno.map(item => `
+                                        <div class="swiper-slide">
+                                            <div class="card">
+                                                <div class="audio-player">
+                                                    <audio id="audio-${item.title.replace(/\s+/g, '-')}" data-visualizer="visualizer-${item.title.replace(/\s+/g, '-')}" data-progress="progress-${item.title.replace(/\s+/g, '-')}" data-play-pause="play-pause-${item.title.replace(/\s+/g, '-')}" aria-label="${item.title}" onerror="console.error('Failed to load audio: ${item.path}')">
+                                                        <source src="${item.path}" type="audio/mpeg">
+                                                        Your browser does not support the audio tag.
+                                                    </audio>
+                                                    <div class="controls">
+                                                        <button class="play-pause" id="play-pause-${item.title.replace(/\s+/g, '-')}" data-audio-id="audio-${item.title.replace(/\s+/g, '-')}">Play</button>
+                                                        <div class="progress-bar">
+                                                            <div class="progress" id="progress-${item.title.replace(/\s+/g, '-')}" data-audio-id="audio-${item.title.replace(/\s+/g, '-')}"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="visualizer" id="visualizer-${item.title.replace(/\s+/g, '-')}" data-audio-id="audio-${item.title.replace(/\s+/g, '-')}">
+                                                        <div class="bar"></div>
+                                                        <div class="bar"></div>
+                                                        <div class="bar"></div>
+                                                        <div class="bar"></div>
+                                                        <div class="bar"></div>
+                                                        <div class="bar"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-content">
+                                                    <h4>${item.title}</h4>
+                                                    <p>${item.description || ''}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    `).join('') : '<div class="swiper-slide"><div class="card"><p>No Suno items available</p></div></div>'}
+                                    </div>
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div>
+                                </div>
+                            </div>
+                        `,
+                    prompts: `
+                            <div class="carousel-container">
+                                <h4>Creative Prompt Examples</h4>
+                                <div class="swiper prompts-carousel">
+                                    <div class="swiper-wrapper" id="promptsCards">
+                                        ${data.generativeAI && data.generativeAI.prompts && Array.isArray(data.generativeAI.prompts) ?
+                            data.generativeAI.prompts.map(item => `
+                                        <div class="swiper-slide">
+                                            <div class="card">
+                                                <div class="text-content">${item.text}</div>
+                                                <div class="card-content">
+                                                    <h4>${item.title}</h4>
+                                                    <p>${item.description || ''}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    `).join('') : '<div class="swiper-slide"><div class="card"><p>No Creative Prompts available</p></div></div>'}
+                                    </div>
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div>
+                                </div>
+                            </div>
+                        `,
+                    animation: `
+                            <div class="carousel-container">
+                                <h4>Animation & Character</h4>
+                                <div class="swiper animation-carousel">
+                                    <div class="swiper-wrapper" id="animationCards">
+                                        ${data.animationCharacter && Array.isArray(data.animationCharacter) ?
+                            data.animationCharacter.map(item => `
+                                        <div class="swiper-slide">
+                                            <div class="card">
+                                                <video controls aria-label="${item.title}">
+                                                    <source src="${item.path}" type="video/mp4" onerror="console.error('Failed to load video: ${item.path}')">
+                                                    Your browser does not support the video tag.
+                                                </video>
+                                                <div class="card-content">
+                                                    <h4>${item.title}</h4>
+                                                    <p>${item.description || ''}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    `).join('') : '<div class="swiper-slide"><div class="card"><p>No Animation items available</p></div></div>'}
+                                    </div>
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div>
+                                </div>
+                            </div>
+                        `,
+                    hdrp: `
+                            <div class="carousel-container">
+                                <h4>HDRP EXAMPLES [HAND PAINTED]</h4>
+                                <div class="swiper hdrp-carousel">
+                                    <div class="swiper-wrapper" id="hdrpCards">
+                                        ${data.environmentalDesign && data.environmentalDesign.hdrp && Array.isArray(data.environmentalDesign.hdrp) ?
+                            data.environmentalDesign.hdrp.map(item => `
+                                        <div class="swiper-slide">
+                                            <div class="card">
+                                                <img data-src="${item.path}" class="swiper-lazy" alt="${item.title}" aria-label="${item.title}" onerror="console.error('Failed to load image: ${item.path}')">
+                                                <div class="swiper-lazy-preloader"></div>
+                                                <div class="card-content">
+                                                    <h4>${item.title}</h4>
+                                                    <p>${item.description || ''}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    `).join('') : '<div class="swiper-slide"><div class="card"><p>No Unity HDRP items available</p></div></div>'}
+                                    </div>
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div>
+                                </div>
+                            </div>
+                        `,
+                    urp: `
+                            <div class="carousel-container">
+                                <h4>URP EXAMPLES [PROCEDURALLY GENERATED / C#]</h4>
+                                <div class="swiper urp-carousel">
+                                    <div class="swiper-wrapper" id="urpCards">
+                                        ${data.environmentalDesign && data.environmentalDesign.urp && Array.isArray(data.environmentalDesign.urp) ?
+                            data.environmentalDesign.urp.map(item => `
+                                        <div class="swiper-slide">
+                                            <div class="card">
+                                                <img data-src="${item.path}" class="swiper-lazy" alt="${item.title}" aria-label="${item.title}" onerror="console.error('Failed to load image: ${item.path}')">
+                                                <div class="swiper-lazy-preloader"></div>
+                                                <div class="card-content">
+                                                    <h4>${item.title}</h4>
+                                                    <p>${item.description || ''}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    `).join('') : '<div class="swiper-slide"><div class="card"><p>No Unity URP items available</p></div></div>'}
+                                    </div>
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div>
+                                </div>
+                            </div>
+                        `
+                };
+
+                // Initialize Swiper for a given carousel
+                function initializeSwiper(carouselClass) {
+                    const swiperContainer = document.querySelector(`.${carouselClass}`);
+                    if (!swiperContainer || !swiperContainer.querySelector('.swiper-slide')) {
+                        console.warn(`Swiper container or slides not found for ${carouselClass}`);
+                        return null;
+                    }
+
+                    const slides = swiperContainer.querySelectorAll('.swiper-slide');
+                    console.log(`Initializing Swiper for ${carouselClass}: ${slides.length} slides`);
+
+                    // Destroy existing Swiper instance if it exists
+                    if (swiperInstances.has(carouselClass)) {
+                        const existingSwiper = swiperInstances.get(carouselClass);
+                        if (existingSwiper) {
+                            existingSwiper.destroy(true, true);
+                            swiperInstances.delete(carouselClass);
+                        }
+                    }
+
+                    // Initialize new Swiper instance with lazy loading
+                    const swiper = new Swiper(swiperContainer, {
+                        slidesPerView: 1,
+                        spaceBetween: 20,
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev'
+                        },
+                        lazy: {
+                            loadPrevNext: true, // Load prev/next image
+                            loadPrevNextAmount: 1, // Amount of prev/next slides to load
+                            loadOnTransitionStart: false // Load on transition start
+                        },
+                        loop: false, // Disable loop to prevent auto-scrolling
+                        allowTouchMove: true,
+                        observer: true,
+                        observeParents: true,
+                        observeSlideChildren: true,
+                        preventClicks: true,
+                        preventClicksPropagation: true,
+                        on: {
+                            init: function () {
+                                this.update();
+                            },
+                            imagesReady: function () {
+                                this.update();
+                            }
+                        }
+                    });
+
+                    // Store the new instance
+                    swiperInstances.set(carouselClass, swiper);
+                    return swiper;
+                }
+
+                // Sync visualizer and progress bar with audio playback
+                function syncAudioPlayer(audio, visualizerId, progressId, playPauseId) {
+                    const visualizer = document.getElementById(visualizerId);
+                    const progress = document.getElementById(progressId);
+                    const playPauseBtn = document.getElementById(playPauseId);
+                    if (!visualizer || !progress || !playPauseBtn) {
+                        console.warn(`Audio player elements not found: ${visualizerId}, ${progressId}, ${playPauseId}`);
+                        return;
+                    }
+
+                    const bars = visualizer.querySelectorAll('.bar');
+                    audio.addEventListener('play', () => {
+                        bars.forEach(bar => bar.style.animationPlayState = 'running');
+                        playPauseBtn.textContent = 'Pause';
+                    });
+                    audio.addEventListener('pause', () => {
+                        bars.forEach(bar => bar.style.animationPlayState = 'paused');
+                        playPauseBtn.textContent = 'Play';
+                    });
+                    audio.addEventListener('ended', () => {
+                        bars.forEach(bar => bar.style.animationPlayState = 'paused');
+                        playPauseBtn.textContent = 'Play';
+                    });
+                    audio.addEventListener('timeupdate', () => {
+                        const progressPercent = (audio.currentTime / audio.duration) * 100;
+                        progress.style.width = `${progressPercent}%`;
+                    });
+
+                    playPauseBtn.addEventListener('click', () => {
+                        if (audio.paused) {
+                            audio.play().catch(err => console.error('Audio play error:', err));
+                        } else {
+                            audio.pause();
+                        }
+                    });
+                }
+
+                // Wait for media to load or fail before initializing Swiper
+                function waitForMedia(carouselClass, container, callback) {
+                    const mediaElements = container.querySelectorAll('img, video');
+                    if (mediaElements.length === 0) {
+                        console.log(`No media to load for ${carouselClass}`);
+                        callback();
+                        return;
+                    }
+
+                    let loadedCount = 0;
+                    mediaElements.forEach(element => {
+                        console.log(`Attempting to load media: ${element.src || element.dataset.src}`);
+                        if (element.tagName === 'IMG' && element.complete) {
+                            loadedCount++;
+                            const aspectRatio = element.naturalWidth / element.naturalHeight;
+                            element.style.aspectRatio = aspectRatio;
+                            console.log(`Image already complete: ${element.src || element.dataset.src}, aspect ratio: ${aspectRatio}`);
+                            if (loadedCount === mediaElements.length) {
+                                callback();
+                            }
+                            return;
+                        }
+                        element.addEventListener('load', () => {
+                            loadedCount++;
+                            console.log(`Media loaded: ${element.src || element.dataset.src}`);
+                            // Set dynamic aspect ratio for images
+                            if (element.tagName === 'IMG') {
+                                const aspectRatio = element.naturalWidth / element.naturalHeight;
+                                element.style.aspectRatio = aspectRatio;
+                                console.log(`Set aspect ratio for ${element.src || element.dataset.src}: ${aspectRatio}`);
+                            }
+                            // Set dynamic aspect ratio for videos
+                            if (element.tagName === 'VIDEO') {
+                                element.addEventListener('loadedmetadata', () => {
+                                    const aspectRatio = element.videoWidth / element.videoHeight;
+                                    element.style.aspectRatio = aspectRatio;
+                                    console.log(`Set aspect ratio for ${element.src}: ${aspectRatio}`);
+                                });
+                            }
+                            if (loadedCount === mediaElements.length) {
+                                callback();
+                            }
+                        });
+                        element.addEventListener('error', () => {
+                            loadedCount++;
+                            console.error(`Failed to load media: ${element.src || element.dataset.src}`);
+                            element.style.aspectRatio = '16 / 9';
+                            if (loadedCount === mediaElements.length) {
+                                callback();
+                            }
+                        });
+                        if (element.tagName === 'VIDEO' || element.tagName === 'AUDIO') {
+                            element.load();
+                        }
+                    });
+
+                    setTimeout(() => {
+                        if (loadedCount < mediaElements.length) {
+                            console.warn(`Media load timeout for ${carouselClass}`);
+                            mediaElements.forEach(element => {
+                                if (!element.style.aspectRatio) {
+                                    element.style.aspectRatio = '16 / 9';
+                                }
+                            });
+                            callback();
+                        }
+                    }, 100); // Increased timeout to 5 seconds for better loading handling
+                }
+
+                // Handle button clicks with fade transition
+                buttons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        buttons.forEach(btn => btn.classList.remove('active'));
+                        button.classList.add('active');
+
+                        mainContent.classList.add('fade');
+                        setTimeout(() => {
+                            const networkGrid = mainContent.querySelector('.network-grid').outerHTML;
+                            mainContent.innerHTML = networkGrid + contentMap[button.dataset.category];
+                            mainContent.classList.remove('fade');
+
+                            console.log(`DOM after update for ${button.dataset.category}:`, mainContent.innerHTML);
+
+                            if (button.dataset.category !== 'skills') {
+                                const carouselClass = `${button.dataset.category}-carousel`;
+                                const swiperContainer = document.querySelector(`.${carouselClass}`);
+                                if (swiperContainer) {
+                                    console.log(`HTML for ${carouselClass}:`, swiperContainer.innerHTML);
+                                    waitForMedia(carouselClass, swiperContainer, () => {
+                                        const swiper = initializeSwiper(carouselClass);
+                                        if (swiper) {
+                                            swiper.update();
+                                            console.log(`Swiper initialized for ${carouselClass}`);
+                                        } else {
+                                            console.warn(`Failed to initialize Swiper for ${carouselClass}`);
+                                        }
+                                    });
+                                } else {
+                                    console.warn(`Swiper container not found for ${carouselClass}`);
+                                }
+
+                                if (button.dataset.category === 'suno') {
+                                    const audioElements = mainContent.querySelectorAll('audio');
+                                    audioElements.forEach(audio => {
+                                        const visualizerId = audio.dataset.visualizer;
+                                        const progressId = audio.dataset.progress;
+                                        const playPauseId = audio.dataset.playPause;
+                                        syncAudioPlayer(audio, visualizerId, progressId, playPauseId);
+                                    });
+                                }
+                            }
+                        }, 500);
+                    });
+                });
+
+                // Set initial active button
+                document.querySelector('button[data-category="skills"]').classList.add('active');
+            })
+            .catch(error => console.error('Error loading portfolio.json:', error));
+    </script>
+</body>
+</html>
