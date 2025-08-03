@@ -1,14 +1,14 @@
-<!DOCTYPE html >
-<html lang="en" >
- <head >
-        <meta charset="UTF-8" >
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-        <meta http-equiv="Cache-Control" content="max-age=31536000, immutable" >
-        <meta http-equiv="X-Content-Type-Options" content="nosniff" >
-        <title > Levi Holmstrom - Creative Technology Specialist Resume</title >
-        <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" / >
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet" >
-        <style >
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="max-age=31536000, immutable">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <title>Levi Holmstrom - Creative Technology Specialist Resume</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
         * {
             margin: 0;
             padding: 0;
@@ -118,7 +118,7 @@
             padding: 20px;
             background: rgba(255, 255, 255, 0.05);
             border-radius: 10px;
-            -webkit-backdrop-filter: blur(10px); /* Added for Safari */
+            -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
             display: flex;
@@ -127,7 +127,7 @@
         }
 
             .section h2 {
-                font-size: 2rem;
+                font-size: 2.3rem;
                 margin-bottom: 20px;
                 color: #fff;
             }
@@ -157,7 +157,7 @@
             .sidebar h3 {
                 font-size: 2rem;
                 color: #fff;
-                margin-bottom: 15px;
+                margin-bottom: 0px;
             }
 
             .sidebar button {
@@ -189,8 +189,10 @@
 
             .sidebar p {
                 font-size: 0.8rem;
+                font-style: italic;
                 color: #ccc;
                 margin-top: 10px;
+                margin-bottom: 20px;
                 text-align: center;
             }
 
@@ -424,6 +426,17 @@
                 margin-top: 8px;
             }
 
+            .card-content a {
+                color: #0088ff;
+                text-decoration: none;
+                transition: color 0.3s ease, text-decoration 0.3s ease;
+            }
+
+                .card-content a:hover {
+                    color: #66b3ff;
+                    text-decoration: underline;
+                }
+
         .skills ul,
         .job ul,
         .qualification ul {
@@ -441,7 +454,7 @@
                 margin-bottom: 8px;
                 position: relative;
                 padding-left: 20px;
-                text-align: center;
+                text-align: left;
             }
 
                 .skills ul li:before,
@@ -663,17 +676,18 @@
             <h1>Levi Holmstrom</h1>
             <p>Technology Specialist | AI, Game Development, Web & IT</p>
         </div>
-
         <div class="section">
             <div class="content-row">
                 <div class="sidebar">
                     <h3>Portfolio</h3>
-                    <p>Core technical competencies</p><br />
+                    <p>Core technical competencies</p>
                     <button data-category="skills">Skills Overview</button>
+                    <p>A.I. Toolset</p>
                     <button data-category="stableDiffusion">Stable Diffusion</button>
                     <button data-category="kling">KLING / VEO3 </button>
                     <button data-category="suno">Suno</button>
-                    <button data-category="prompts">Creative Prompts</button>
+                    <button data-category="prompts">GPT / GROK / GEMINI</button>
+                    <p>3D / Animation</p>
                     <button data-category="animation">Animation & Character</button>
                     <button data-category="hdrp">Unity HDRP</button>
                     <button data-category="urp">Unity URP</button>
@@ -700,71 +714,96 @@
                     <div class="skills">
                         <h3>[ Artificial Intelligence & Automation ]</h3>
                         <ul>
-                            <li><strong>AI Integration:</strong> Leveraged ChatGPT since January 2024 for automation, scripting, and interactive systems.</li>
-                            <li><strong>AI Creative Tools:</strong> Experience with <strong><em>StableDiffusion</em></strong>,<strong><em> Suno</em></strong>, <strong><em>Kling</em></strong>, <strong><em>Meshy.ai</em></strong>.</li>
-                            <li><strong>Prompt Engineering:</strong> Developed instruction sets for AI models, including a ChatGPT helper module with 200+ unique user interactions.</li>
-                            <li><strong>LLM:</strong> Baseline knowledge on Bigram Counting to Self-Attention. Spooled up internal GPT2 transformer.</li>
+                            <li><strong><span style="color: #0088ff;">AI Integration</span>:</strong> Leveraged ChatGPT since January 2024 for automation, scripting, and interactive systems.</li>
+                            <li><strong><span style="color: #0088ff;">AI Creative Tools</span>:</strong> Experience with <strong><em>StableDiffusion</em></strong>,<strong><em> Suno</em></strong>, <strong><em>Kling</em></strong>, <strong><em>Meshy.ai</em></strong>.</li>
+                            <li><strong><span style="color: #0088ff;">Prompt Engineering</span>:</strong> Developed instruction sets for AI models, including a ChatGPT helper module with 200+ unique user interactions.</li>
+                            <li><strong><span style="color: #0088ff;">LLM</span>:</strong> Baseline knowledge on Bigram Counting to Self-Attention. Spooled up internal GPT2 transformer.</li>
                             <br />
                             <br />
                         </ul>
                         <h3>[ Game Development & 3D Animation ]</h3>
                         <ul>
-                            <li><strong>Unity 3D Development:</strong> Built interactive applications and networked games using Unity 3D, with expertise in FishNet for client-side prediction and multiplayer functionality.</li>
-                            <li><strong>Motion Capture:</strong> Captured and integrated 3D performances using Reallusion software, enhancing character animations for games and simulations.</li>
+                            <li><strong><span style="color: #0088ff;">Unity 3D Development</span>:</strong> Built interactive applications and networked games using Unity 3D, with expertise in FishNet for client-side prediction and multiplayer functionality.</li>
+                            <li><strong><span style="color: #0088ff;">Motion Capture</span>:</strong> Captured and integrated 3D performances using Reallusion software, enhancing character animations for games and simulations.</li>
                             <br />
                             <br />
                         </ul>
                         <h3>[ Software & Web Development ]</h3>
                         <ul>
-                            <li><strong>Development Environments:</strong> Configured robust environments for Python, React, C#/C++, managing dependencies, SDKs, and build pipelines.</li>
-                            <li><strong>Web Server Management:</strong> Provisioned and hosted web servers using on-premise and cloud platforms (Cloudflare, Azure, GitHub) for scalable applications.</li>
+                            <li><strong><span style="color: #0088ff;">Development Environments</span>:</strong> Configured robust environments for Python, React, C#/C++, managing dependencies, SDKs, and build pipelines.</li>
+                            <li><strong><span style="color: #0088ff;">Web Server Management</span>:</strong> Provisioned and hosted web servers using on-premise and cloud platforms (Cloudflare, Azure, GitHub) for scalable applications.</li>
                             <br />
                             <br />
                         </ul>
                         <h3>[ Networking & System Administration ]</h3>
                         <ul>
-                            <li><strong>Network Infrastructure:</strong> Configured Cisco Meraki and Palo Alto networks, including subnet zoning and access point management.</li>
-                            <li><strong>System Administration:</strong> Managed enterprise resources using Microsoft Endpoint Manager, OKTA, Intune, and Panorama for secure access and deployment.</li>
+                            <li><strong><span style="color: #0088ff;">Network Infrastructure</span>:</strong> Configured Cisco Meraki and Palo Alto networks, including subnet zoning and access point management.</li>
+                            <li><strong><span style="color: #0088ff;">System Administration</span>:</strong> Managed enterprise resources using Microsoft Endpoint Manager, OKTA, Intune, and Panorama for secure access and deployment.</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-
         <div class="section">
             <h2>Professional Experience</h2>
             <div class="job">
-                <h3>Technical Business Analyst / Service Delivery Propagation</h3>
-                <p>Lorna Jane HQ, Brisbane, QLD (6-Month Contract)</p>
+                <br />
+                <p>-</p>
+                <br /><br />
+                <h3>Testing & Support Specialist (SAP Business One Implementation)</h3>
+                <p>Rheinmetall, Maryborough, QLD (6-Month Contract)</p>
+                <br />
                 <ul>
-                    <li>Monitored Microsoft Dynamics AX using PowerShell tools for daily reporting.</li>
-                    <li>Reported data to CIO for NetSuite ERP implementation.</li>
-                    <li>Updated IT Service Delivery documentation, addressing procedural gaps.</li>
-                    <li>Designed CRM request pipeline using Visio for ZenDesk modules.</li>
-                    <li>Administered resources via Microsoft Endpoint Manager, OKTA, and Panorama.</li>
-                    <li>Deployed mobile fleet devices with Microsoft Intune.</li>
-                    <li>Configured SQL Express and Retail Modern POS systems for store deployments.</li>
-                    <li>Managed Cisco Meraki and Palo Alto network configurations.</li>
+                    <li><span style="color: #0088ff;">Defect Management & Resolution</span>: Documented test outcomes, logged defects in the ticketing system, and collaborated with developers and SMEs to triage and resolve issues promptly.</li>
+                    <li><span style="color: #0088ff;">Cross-Functional Collaboration</span>: Worked closely with business analysts and department leads to clarify requirements and validate system functionality. Communicated testing progress, risks, and results to stakeholders throughout the project lifecycle.</li>
+                    <li><span style="color: #0088ff;">Data Migration & Integration Testing</span>: Supported SAP data migration efforts by verifying data integrity and validating system configurations post-migration. Conducted integration tests to confirm seamless communication between legacy systems and newly implemented SAP modules.</li>
+                    <li><span style="color: #0088ff;">User Acceptance Testing (UAT) Support</span>: Assisted end-users in UAT activities, providing on-site support, guiding test execution, and ensuring comprehensive feedback was captured and addressed.</li>
+                    <li><strong><span style="color: #0088ff;">Technical Environment Setup</span>:</strong> Coordinated with the migration team to set up user test environments, provision necessary hardware/software, and ensure added network access for testing activities.</li>
+                    <li><span style="color: #0088ff;">Training & Knowledge Transfer</span>: Provided end-users and team members with training on SAP functionality and testing procedures, fostering a smooth transition for new processes and tools.</li>
+                    <li><span style="color: #0088ff;">Documentation & Reporting</span>: Maintained detailed documentation of test plans, test results, and issue resolution steps. Prepared regular status reports to keep project managers and stakeholders informed of progress and tasks.</li>
+                    <br />
                 </ul>
             </div>
             <div class="job">
+                <p>-</p>
+                <br />
+                <br />
+                <h3>Technical Business Analyst / Service Delivery Propagation (NetSuite Implementation Project / SLA Optimization)</h3>
+                <p>Lorna Jane HQ, Brisbane, QLD (12-Month Contract)</p>
+                <br />
+                <ul>
+                    <li><span style="color: #0088ff;">Microsoft Dynamics AX Monitoring & Reporting</span>: Performed daily system checks and generated status reports using in-house PowerShell tools, ensuring data integrity and system performance for key stakeholders.</li>
+                    <li><span style="color: #0088ff;">ERP (NetSuite) Data Collection & Analysis</span>: Gathered and analyzed data for the brand’s new ERP (NetSuite), consolidating findings into concise reports for the CIO to drive informed decision-making.</li>
+                    <li><span style="color: #0088ff;">IT Service Delivery & Process Improvement</span>: Identified and addressed outdated procedure documentation, collaborating with team members to update information and maintain an accurate knowledge base for smoother service delivery.</li>
+                    <li><span style="color: #0088ff;">CRM Pipeline Establishment</span>: Designed and documented a CRM request pipeline for future CRM implementations (including Zendesk modules) using Visio, standardizing processes for improved scalability and efficiency.</li>
+                    <li><span style="color: #0088ff;">Enterprise Resource Administration</span>: Managed user accounts, permissions, and access across multiple platforms (Microsoft Endpoint Manager, OKTA Dashboard, Panorama). Ensured compliance and security standards were upheld.</li>
+                    <li><span style="color: #0088ff;">Mobile Device Deployment & Documentation</span>: Led the rollout of mobile devices for service using Microsoft Intune, creating detailed deployment and usage documentation for IT Service Delivery teams.</li>
+                    <li><span style="color: #0088ff;">POS & Database Configuration</span>: Installed and established SQL Express and Retail Modern Point-of-Sale (POS) systems for store deployment, enabling real-time sales tracking and customer interactions.</li>
+                    <li><span style="color: #0088ff;">Network & Security Configuration</span>: Created and configured Microsoft Visio, Arlo switches, racks, and access points (including subnet zoning) to optimize network reliability and security.</li>
+                    <li><span style="color: #0088ff;">Managed Services</span>: Administered O365, Azure, and Intune.</li>
+                </ul>
+            </div>
+            <div class="job">
+                <br />
+                <br />
                 <h3>Previous Roles</h3>
                 <ul>
-                    <li>Windows 10 Roll-out, Multipplex (Jul 2019 - Feb 2020)</li>
-                    <li>L2/L3 Analyst, Beam Surfory (Dec 2017 - Jun 2019)</li>
-                    <li>Senior Desktop Engineer, AIA Insurance (Jan 2017 - Nov 2017)</li>
-                    <li>LHD Project, BAE Systems (Jan 2013 - Nov 2015)</li>
-                    <li>System Administrator, Vekla My U (Apr 2011 - Jan 2013)</li>
-                    <li>System Engineer, Secure Agility (Aug 2009 - Mar 2011)</li>
-                    <li>Jnr Desktop Support, Aus Kitchen Ind (Dec 2008 - Mar 2009)</li>
+                    <li>MSP Transition, NHVR (Govt), Jul 2019 - Feb 2020</li>
+                    <li>Windows 10 Roll-out, Multiplex, Jul 2019 - Feb 2020</li>
+                    <li>L2/L3 Analyst, Beam Suntory, Dec 2017 - Jun 2019</li>
+                    <li>Senior Desktop Engineer, AIA Insurance, Jan 2017 - Nov 2017</li>
+                    <li>Travel, North America / Asia, Dec 2015 - Nov 2016</li>
+                    <li>LHD Project, BAE Systems, Jan 2013 - Nov 2015</li>
+                    <li>System Administrator, Vekta Pty Ltd, Apr 2011 - Jan 2013</li>
+                    <li>System Engineer, Secure Agility, Aug 2009 - Mar 2011</li>
+                    <li>Jnr Desktop Support, Aus Kitchen Ind, Dec 2008 - Mar 2009</li>
                 </ul>
             </div>
         </div>
-
         <div class="section">
             <h2>Qualifications</h2>
             <div class="qualification">
-                <h3>MCAI - Windows Server 2016</h3>
+                <h3>MCSA - Windows Server 2016</h3>
                 <p>Pearson VUE, Sydney (Completed 2018)</p>
             </div>
             <div class="qualification">
@@ -772,24 +811,20 @@
                 <p>Mt Druitt TAFE, NSW (Completed 2012)</p>
             </div>
         </div>
-
         <div class="section">
             <h2>Hobbies</h2>
             <div class="hobby">
-                <p>Outdoor Adventure, Music/Entertainment, Technology, Travel, Home Renovation, Investing & Markets</p>
+                <p>Sculpting, Music / Entertainment, Technology, Night-life, Home Renovation, Investing & Markets</p>
             </div>
         </div>
-
         <div class="section">
             <h2>References</h2>
             <p>Available upon request</p>
         </div>
-
         <div class="footer">
-            <p>Contact: <a href="mailto:levi.holmstrom@example.com" class="text-gray-400 hover:text-white">levi.holmstrom@example.com</a> | © 2025 Levi Holmstrom</p>
+            <p>Contact: <a href="mailto:leviholmstrom1@gmail.com" class="text-gray-400 hover:text-white">leviholmstrom1@gmail.com</a> | © 2025 Levi Holmstrom</p>
         </div>
     </div>
-
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script>
@@ -814,6 +849,18 @@
         // Store Swiper instances manually
         const swiperInstances = new Map();
 
+        // Function to escape HTML characters to prevent XSS
+        function escapeHTML(str) {
+            return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+        }
+
+        // Function to convert URLs in text to clickable links
+        function linkify(text) {
+            if (!text) return '';
+            const urlRegex = /(https?:\/\/[^\s/$.?#].[^\s]*)/gi;
+            return escapeHTML(text).replace(urlRegex, url => `<a href="${url}" target="_blank" rel="noopener noreferrer">${url}</a>`);
+        }
+
         // Fetch portfolio.json and initialize content
         fetch('portfolio.json')
             .then(response => {
@@ -823,7 +870,6 @@
             .then(data => {
                 const mainContent = document.getElementById('mainContent');
                 const buttons = document.querySelectorAll('.sidebar button');
-
                 // Validate portfolio data
                 console.log('Portfolio data:', data);
                 if (!data.generativeAI || !data.generativeAI.stableDiffusion) {
@@ -833,201 +879,200 @@
                 } else {
                     console.log('Stable Diffusion data:', data.generativeAI.stableDiffusion);
                 }
-
                 // Store portfolio content for each category
                 const contentMap = {
                     skills: mainContent.querySelector('.skills').outerHTML,
                     stableDiffusion: `
-                            <div class="carousel-container">
-                                <h4>Stable Diffusion Examples</h4>
-                                <div class="swiper stableDiffusion-carousel">
-                                    <div class="swiper-wrapper" id="stableDiffusionCards">
-                                        ${data.generativeAI && data.generativeAI.stableDiffusion && Array.isArray(data.generativeAI.stableDiffusion) ?
+                                    <div class="carousel-container">
+                                        <h4>In-House Generation [ Cost = $0.00 ]</h4>
+                                        <div class="swiper stableDiffusion-carousel">
+                                            <div class="swiper-wrapper" id="stableDiffusionCards">
+                                                ${data.generativeAI && data.generativeAI.stableDiffusion && Array.isArray(data.generativeAI.stableDiffusion) ?
                             data.generativeAI.stableDiffusion.map(item => `
-                                        <div class="swiper-slide">
-                                            <div class="card">
-                                                <img data-src="${item.path}" class="swiper-lazy" alt="${item.title}" aria-label="${item.title}" onerror="console.error('Failed to load image: ${item.path}')">
-                                                <div class="swiper-lazy-preloader"></div>
-                                                <div class="card-content">
-                                                    <h4>${item.title}</h4>
-                                                    <p>${item.description || ''}</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    `).join('') : '<div class="swiper-slide"><div class="card"><p>No Stable Diffusion items available</p></div></div>'}
-                                    </div>
-                                    <div class="swiper-button-prev"></div>
-                                    <div class="swiper-button-next"></div>
-                                </div>
-                            </div>
-                        `,
-                    kling: `
-                            <div class="carousel-container">
-                                <h4>Production Example</h4>
-                                <div class="swiper kling-carousel">
-                                    <div class="swiper-wrapper" id="klingCards">
-                                        ${data.generativeAI && data.generativeAI.kling && Array.isArray(data.generativeAI.kling) ?
-                            data.generativeAI.kling.map(item => `
-                                        <div class="swiper-slide">
-                                            <div class="card">
-                                                <video controls aria-label="${item.title}">
-                                                    <source src="${item.path}" type="video/mp4" onerror="console.error('Failed to load video: ${item.path}')">
-                                                    Your browser does not support the video tag.
-                                                </video>
-                                                <div class="card-content">
-                                                    <h4>${item.title}</h4>
-                                                    <p>${item.description || ''}</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    `).join('') : '<div class="swiper-slide"><div class="card"><p>No Kling.ai items available</p></div></div>'}
-                                    </div>
-                                    <div class="swiper-button-prev"></div>
-                                    <div class="swiper-button-next"></div>
-                                </div>
-                            </div>
-                        `,
-                    suno: `
-                            <div class="carousel-container">
-                                <h4>Suno Examples</h4>
-                                <div class="swiper suno-carousel">
-                                    <div class="swiper-wrapper" id="sunoCards">
-                                        ${data.generativeAI && data.generativeAI.suno && Array.isArray(data.generativeAI.suno) ?
-                            data.generativeAI.suno.map(item => `
-                                        <div class="swiper-slide">
-                                            <div class="card">
-                                                <div class="audio-player">
-                                                    <audio id="audio-${item.title.replace(/\s+/g, '-')}" data-visualizer="visualizer-${item.title.replace(/\s+/g, '-')}" data-progress="progress-${item.title.replace(/\s+/g, '-')}" data-play-pause="play-pause-${item.title.replace(/\s+/g, '-')}" aria-label="${item.title}" onerror="console.error('Failed to load audio: ${item.path}')">
-                                                        <source src="${item.path}" type="audio/mpeg">
-                                                        Your browser does not support the audio tag.
-                                                    </audio>
-                                                    <div class="controls">
-                                                        <button class="play-pause" id="play-pause-${item.title.replace(/\s+/g, '-')}" data-audio-id="audio-${item.title.replace(/\s+/g, '-')}">Play</button>
-                                                        <div class="progress-bar">
-                                                            <div class="progress" id="progress-${item.title.replace(/\s+/g, '-')}" data-audio-id="audio-${item.title.replace(/\s+/g, '-')}"></div>
+                                                <div class="swiper-slide">
+                                                    <div class="card">
+                                                        <img data-src="${item.path}" class="swiper-lazy" alt="${item.title}" aria-label="${item.title}" onerror="console.error('Failed to load image: ${item.path}')">
+                                                        <div class="swiper-lazy-preloader"></div>
+                                                        <div class="card-content">
+                                                            <h4>${item.title}</h4>
+                                                            <p>${item.description ? linkify(item.description) : ''}</p>
                                                         </div>
                                                     </div>
-                                                    <div class="visualizer" id="visualizer-${item.title.replace(/\s+/g, '-')}" data-audio-id="audio-${item.title.replace(/\s+/g, '-')}">
-                                                        <div class="bar"></div>
-                                                        <div class="bar"></div>
-                                                        <div class="bar"></div>
-                                                        <div class="bar"></div>
-                                                        <div class="bar"></div>
-                                                        <div class="bar"></div>
+                                                </div>
+                                            `).join('') : '<div class="swiper-slide"><div class="card"><p>No Stable Diffusion items available</p></div></div>'}
+                                            </div>
+                                            <div class="swiper-button-prev"></div>
+                                            <div class="swiper-button-next"></div>
+                                        </div>
+                                    </div>
+                                `,
+                    kling: `
+                                    <div class="carousel-container">
+                                        <h4>Production Example</h4>
+                                        <div class="swiper kling-carousel">
+                                            <div class="swiper-wrapper" id="klingCards">
+                                                ${data.generativeAI && data.generativeAI.kling && Array.isArray(data.generativeAI.kling) ?
+                            data.generativeAI.kling.map(item => `
+                                                <div class="swiper-slide">
+                                                    <div class="card">
+                                                        <video controls aria-label="${item.title}">
+                                                            <source src="${item.path}" type="video/mp4" onerror="console.error('Failed to load video: ${item.path}')">
+                                                            Your browser does not support the video tag.
+                                                        </video>
+                                                        <div class="card-content">
+                                                            <h4>${item.title}</h4>
+                                                            <p>${item.description ? linkify(item.description) : ''}</p>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="card-content">
-                                                    <h4>${item.title}</h4>
-                                                    <p>${item.description || ''}</p>
-                                                </div>
+                                            `).join('') : '<div class="swiper-slide"><div class="card"><p>No Kling.ai items available</p></div></div>'}
                                             </div>
+                                            <div class="swiper-button-prev"></div>
+                                            <div class="swiper-button-next"></div>
                                         </div>
-                                    `).join('') : '<div class="swiper-slide"><div class="card"><p>No Suno items available</p></div></div>'}
                                     </div>
-                                    <div class="swiper-button-prev"></div>
-                                    <div class="swiper-button-next"></div>
-                                </div>
-                            </div>
-                        `,
+                                `,
+                    suno: `
+                                    <div class="carousel-container">
+                                        <h4>Suno Examples</h4>
+                                        <div class="swiper suno-carousel">
+                                            <div class="swiper-wrapper" id="sunoCards">
+                                                ${data.generativeAI && data.generativeAI.suno && Array.isArray(data.generativeAI.suno) ?
+                            data.generativeAI.suno.map(item => `
+                                                <div class="swiper-slide">
+                                                    <div class="card">
+                                                        <div class="audio-player">
+                                                            <audio id="audio-${item.title.replace(/\s+/g, '-')}" data-visualizer="visualizer-${item.title.replace(/\s+/g, '-')}" data-progress="progress-${item.title.replace(/\s+/g, '-')}" data-play-pause="play-pause-${item.title.replace(/\s+/g, '-')}" aria-label="${item.title}" onerror="console.error('Failed to load audio: ${item.path}')">
+                                                                <source src="${item.path}" type="audio/mpeg">
+                                                                Your browser does not support the audio tag.
+                                                            </audio>
+                                                            <div class="controls">
+                                                                <button class="play-pause" id="play-pause-${item.title.replace(/\s+/g, '-')}" data-audio-id="audio-${item.title.replace(/\s+/g, '-')}">Play</button>
+                                                                <div class="progress-bar">
+                                                                    <div class="progress" id="progress-${item.title.replace(/\s+/g, '-')}" data-audio-id="audio-${item.title.replace(/\s+/g, '-')}"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="visualizer" id="visualizer-${item.title.replace(/\s+/g, '-')}" data-audio-id="audio-${item.title.replace(/\s+/g, '-')}">
+                                                                <div class="bar"></div>
+                                                                <div class="bar"></div>
+                                                                <div class="bar"></div>
+                                                                <div class="bar"></div>
+                                                                <div class="bar"></div>
+                                                                <div class="bar"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-content">
+                                                            <h4>${item.title}</h4>
+                                                            <p>${item.description ? linkify(item.description) : ''}</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            `).join('') : '<div class="swiper-slide"><div class="card"><p>No Suno items available</p></div></div>'}
+                                            </div>
+                                            <div class="swiper-button-prev"></div>
+                                            <div class="swiper-button-next"></div>
+                                        </div>
+                                    </div>
+                                `,
                     prompts: `
-                            <div class="carousel-container">
-                                <h4>Creative Prompt Examples</h4>
-                                <div class="swiper prompts-carousel">
-                                    <div class="swiper-wrapper" id="promptsCards">
-                                        ${data.generativeAI && data.generativeAI.prompts && Array.isArray(data.generativeAI.prompts) ?
+                                    <div class="carousel-container">
+                                        <h4>Miscellaneous</h4>
+                                        <div class="swiper prompts-carousel">
+                                            <div class="swiper-wrapper" id="promptsCards">
+                                                ${data.generativeAI && data.generativeAI.prompts && Array.isArray(data.generativeAI.prompts) ?
                             data.generativeAI.prompts.map(item => `
-                                        <div class="swiper-slide">
-                                            <div class="card">
-                                                <div class="text-content">${item.text}</div>
-                                                <div class="card-content">
-                                                    <h4>${item.title}</h4>
-                                                    <p>${item.description || ''}</p>
+                                                <div class="swiper-slide">
+                                                    <div class="card">
+                                                        <img data-src="${item.path}" class="swiper-lazy" alt="${item.title}" aria-label="${item.title}" onerror="console.error('Failed to load image: ${item.path}')">
+                                                        <div class="swiper-lazy-preloader"></div>
+                                                        <div class="card-content">
+                                                            <h4>${item.title}</h4>
+                                                            <p>${item.description ? linkify(item.description) : ''}</p>
+                                                        </div>
+                                                    </div>
                                                 </div>
+                                            `).join('') : '<div class="swiper-slide"><div class="card"><p>No Prompt images available</p></div></div>'}
                                             </div>
+                                            <div class="swiper-button-prev"></div>
+                                            <div class="swiper-button-next"></div>
                                         </div>
-                                    `).join('') : '<div class="swiper-slide"><div class="card"><p>No Creative Prompts available</p></div></div>'}
                                     </div>
-                                    <div class="swiper-button-prev"></div>
-                                    <div class="swiper-button-next"></div>
-                                </div>
-                            </div>
-                        `,
+                                `,
                     animation: `
-                            <div class="carousel-container">
-                                <h4>Animation & Character</h4>
-                                <div class="swiper animation-carousel">
-                                    <div class="swiper-wrapper" id="animationCards">
-                                        ${data.animationCharacter && Array.isArray(data.animationCharacter) ?
+                                    <div class="carousel-container">
+                                        <h4>Animation & Character</h4>
+                                        <div class="swiper animation-carousel">
+                                            <div class="swiper-wrapper" id="animationCards">
+                                                ${data.animationCharacter && Array.isArray(data.animationCharacter) ?
                             data.animationCharacter.map(item => `
-                                        <div class="swiper-slide">
-                                            <div class="card">
-                                                <video controls aria-label="${item.title}">
-                                                    <source src="${item.path}" type="video/mp4" onerror="console.error('Failed to load video: ${item.path}')">
-                                                    Your browser does not support the video tag.
-                                                </video>
-                                                <div class="card-content">
-                                                    <h4>${item.title}</h4>
-                                                    <p>${item.description || ''}</p>
+                                                <div class="swiper-slide">
+                                                    <div class="card">
+                                                        <video controls aria-label="${item.title}">
+                                                            <source src="${item.path}" type="video/mp4" onerror="console.error('Failed to load video: ${item.path}')">
+                                                            Your browser does not support the video tag.
+                                                        </video>
+                                                        <div class="card-content">
+                                                            <h4>${item.title}</h4>
+                                                            <p>${item.description ? linkify(item.description) : ''}</p>
+                                                        </div>
+                                                    </div>
                                                 </div>
+                                            `).join('') : '<div class="swiper-slide"><div class="card"><p>No Animation items available</p></div></div>'}
                                             </div>
+                                            <div class="swiper-button-prev"></div>
+                                            <div class="swiper-button-next"></div>
                                         </div>
-                                    `).join('') : '<div class="swiper-slide"><div class="card"><p>No Animation items available</p></div></div>'}
                                     </div>
-                                    <div class="swiper-button-prev"></div>
-                                    <div class="swiper-button-next"></div>
-                                </div>
-                            </div>
-                        `,
+                                `,
                     hdrp: `
-                            <div class="carousel-container">
-                                <h4>HDRP EXAMPLES [HAND PAINTED]</h4>
-                                <div class="swiper hdrp-carousel">
-                                    <div class="swiper-wrapper" id="hdrpCards">
-                                        ${data.environmentalDesign && data.environmentalDesign.hdrp && Array.isArray(data.environmentalDesign.hdrp) ?
+                                    <div class="carousel-container">
+                                        <h4>HDRP EXAMPLES [HAND PAINTED]</h4>
+                                        <div class="swiper hdrp-carousel">
+                                            <div class="swiper-wrapper" id="hdrpCards">
+                                                ${data.environmentalDesign && data.environmentalDesign.hdrp && Array.isArray(data.environmentalDesign.hdrp) ?
                             data.environmentalDesign.hdrp.map(item => `
-                                        <div class="swiper-slide">
-                                            <div class="card">
-                                                <img data-src="${item.path}" class="swiper-lazy" alt="${item.title}" aria-label="${item.title}" onerror="console.error('Failed to load image: ${item.path}')">
-                                                <div class="swiper-lazy-preloader"></div>
-                                                <div class="card-content">
-                                                    <h4>${item.title}</h4>
-                                                    <p>${item.description || ''}</p>
+                                                <div class="swiper-slide">
+                                                    <div class="card">
+                                                        <img data-src="${item.path}" class="swiper-lazy" alt="${item.title}" aria-label="${item.title}" onerror="console.error('Failed to load image: ${item.path}')">
+                                                        <div class="swiper-lazy-preloader"></div>
+                                                        <div class="card-content">
+                                                            <h4>${item.title}</h4>
+                                                            <p>${item.description ? linkify(item.description) : ''}</p>
+                                                        </div>
+                                                    </div>
                                                 </div>
+                                            `).join('') : '<div class="swiper-slide"><div class="card"><p>No Unity HDRP items available</p></div></div>'}
                                             </div>
+                                            <div class="swiper-button-prev"></div>
+                                            <div class="swiper-button-next"></div>
                                         </div>
-                                    `).join('') : '<div class="swiper-slide"><div class="card"><p>No Unity HDRP items available</p></div></div>'}
                                     </div>
-                                    <div class="swiper-button-prev"></div>
-                                    <div class="swiper-button-next"></div>
-                                </div>
-                            </div>
-                        `,
+                                `,
                     urp: `
-                            <div class="carousel-container">
-                                <h4>URP EXAMPLES [PROCEDURALLY GENERATED / C#]</h4>
-                                <div class="swiper urp-carousel">
-                                    <div class="swiper-wrapper" id="urpCards">
-                                        ${data.environmentalDesign && data.environmentalDesign.urp && Array.isArray(data.environmentalDesign.urp) ?
+                                    <div class="carousel-container">
+                                        <h4>URP EXAMPLES [PROCEDURALLY GENERATED / C#]</h4>
+                                        <div class="swiper urp-carousel">
+                                            <div class="swiper-wrapper" id="urpCards">
+                                                ${data.environmentalDesign && data.environmentalDesign.urp && Array.isArray(data.environmentalDesign.urp) ?
                             data.environmentalDesign.urp.map(item => `
-                                        <div class="swiper-slide">
-                                            <div class="card">
-                                                <img data-src="${item.path}" class="swiper-lazy" alt="${item.title}" aria-label="${item.title}" onerror="console.error('Failed to load image: ${item.path}')">
-                                                <div class="swiper-lazy-preloader"></div>
-                                                <div class="card-content">
-                                                    <h4>${item.title}</h4>
-                                                    <p>${item.description || ''}</p>
+                                                <div class="swiper-slide">
+                                                    <div class="card">
+                                                        <img data-src="${item.path}" class="swiper-lazy" alt="${item.title}" aria-label="${item.title}" onerror="console.error('Failed to load image: ${item.path}')">
+                                                        <div class="swiper-lazy-preloader"></div>
+                                                        <div class="card-content">
+                                                            <h4>${item.title}</h4>
+                                                            <p>${item.description ? linkify(item.description) : ''}</p>
+                                                        </div>
+                                                    </div>
                                                 </div>
+                                            `).join('') : '<div class="swiper-slide"><div class="card"><p>No Unity URP items available</p></div></div>'}
                                             </div>
+                                            <div class="swiper-button-prev"></div>
+                                            <div class="swiper-button-next"></div>
                                         </div>
-                                    `).join('') : '<div class="swiper-slide"><div class="card"><p>No Unity URP items available</p></div></div>'}
                                     </div>
-                                    <div class="swiper-button-prev"></div>
-                                    <div class="swiper-button-next"></div>
-                                </div>
-                            </div>
-                        `
+                                `
                 };
-
                 // Initialize Swiper for a given carousel
                 function initializeSwiper(carouselClass) {
                     const swiperContainer = document.querySelector(`.${carouselClass}`);
@@ -1035,10 +1080,8 @@
                         console.warn(`Swiper container or slides not found for ${carouselClass}`);
                         return null;
                     }
-
                     const slides = swiperContainer.querySelectorAll('.swiper-slide');
                     console.log(`Initializing Swiper for ${carouselClass}: ${slides.length} slides`);
-
                     // Destroy existing Swiper instance if it exists
                     if (swiperInstances.has(carouselClass)) {
                         const existingSwiper = swiperInstances.get(carouselClass);
@@ -1047,7 +1090,6 @@
                             swiperInstances.delete(carouselClass);
                         }
                     }
-
                     // Initialize new Swiper instance with lazy loading
                     const swiper = new Swiper(swiperContainer, {
                         slidesPerView: 1,
@@ -1057,11 +1099,11 @@
                             prevEl: '.swiper-button-prev'
                         },
                         lazy: {
-                            loadPrevNext: true, // Load prev/next image
-                            loadPrevNextAmount: 1, // Amount of prev/next slides to load
-                            loadOnTransitionStart: false // Load on transition start
+                            loadPrevNext: true,
+                            loadPrevNextAmount: 1,
+                            loadOnTransitionStart: false
                         },
-                        loop: false, // Disable loop to prevent auto-scrolling
+                        loop: false,
                         allowTouchMove: true,
                         observer: true,
                         observeParents: true,
@@ -1077,12 +1119,10 @@
                             }
                         }
                     });
-
                     // Store the new instance
                     swiperInstances.set(carouselClass, swiper);
                     return swiper;
                 }
-
                 // Sync visualizer and progress bar with audio playback
                 function syncAudioPlayer(audio, visualizerId, progressId, playPauseId) {
                     const visualizer = document.getElementById(visualizerId);
@@ -1092,7 +1132,6 @@
                         console.warn(`Audio player elements not found: ${visualizerId}, ${progressId}, ${playPauseId}`);
                         return;
                     }
-
                     const bars = visualizer.querySelectorAll('.bar');
                     audio.addEventListener('play', () => {
                         bars.forEach(bar => bar.style.animationPlayState = 'running');
@@ -1110,7 +1149,6 @@
                         const progressPercent = (audio.currentTime / audio.duration) * 100;
                         progress.style.width = `${progressPercent}%`;
                     });
-
                     playPauseBtn.addEventListener('click', () => {
                         if (audio.paused) {
                             audio.play().catch(err => console.error('Audio play error:', err));
@@ -1119,7 +1157,6 @@
                         }
                     });
                 }
-
                 // Wait for media to load or fail before initializing Swiper
                 function waitForMedia(carouselClass, container, callback) {
                     const mediaElements = container.querySelectorAll('img, video');
@@ -1128,7 +1165,6 @@
                         callback();
                         return;
                     }
-
                     let loadedCount = 0;
                     mediaElements.forEach(element => {
                         console.log(`Attempting to load media: ${element.src || element.dataset.src}`);
@@ -1145,13 +1181,11 @@
                         element.addEventListener('load', () => {
                             loadedCount++;
                             console.log(`Media loaded: ${element.src || element.dataset.src}`);
-                            // Set dynamic aspect ratio for images
                             if (element.tagName === 'IMG') {
                                 const aspectRatio = element.naturalWidth / element.naturalHeight;
                                 element.style.aspectRatio = aspectRatio;
                                 console.log(`Set aspect ratio for ${element.src || element.dataset.src}: ${aspectRatio}`);
                             }
-                            // Set dynamic aspect ratio for videos
                             if (element.tagName === 'VIDEO') {
                                 element.addEventListener('loadedmetadata', () => {
                                     const aspectRatio = element.videoWidth / element.videoHeight;
@@ -1175,7 +1209,6 @@
                             element.load();
                         }
                     });
-
                     setTimeout(() => {
                         if (loadedCount < mediaElements.length) {
                             console.warn(`Media load timeout for ${carouselClass}`);
@@ -1186,23 +1219,19 @@
                             });
                             callback();
                         }
-                    }, 100); // Increased timeout to 5 seconds for better loading handling
+                    }, 100);
                 }
-
                 // Handle button clicks with fade transition
                 buttons.forEach(button => {
                     button.addEventListener('click', () => {
                         buttons.forEach(btn => btn.classList.remove('active'));
                         button.classList.add('active');
-
                         mainContent.classList.add('fade');
                         setTimeout(() => {
                             const networkGrid = mainContent.querySelector('.network-grid').outerHTML;
                             mainContent.innerHTML = networkGrid + contentMap[button.dataset.category];
                             mainContent.classList.remove('fade');
-
                             console.log(`DOM after update for ${button.dataset.category}:`, mainContent.innerHTML);
-
                             if (button.dataset.category !== 'skills') {
                                 const carouselClass = `${button.dataset.category}-carousel`;
                                 const swiperContainer = document.querySelector(`.${carouselClass}`);
@@ -1220,7 +1249,6 @@
                                 } else {
                                     console.warn(`Swiper container not found for ${carouselClass}`);
                                 }
-
                                 if (button.dataset.category === 'suno') {
                                     const audioElements = mainContent.querySelectorAll('audio');
                                     audioElements.forEach(audio => {
@@ -1234,7 +1262,6 @@
                         }, 500);
                     });
                 });
-
                 // Set initial active button
                 document.querySelector('button[data-category="skills"]').classList.add('active');
             })
